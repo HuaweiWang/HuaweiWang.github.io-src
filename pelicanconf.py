@@ -14,6 +14,11 @@ DEFAULT_LANG = u'en'
 
 THEME = "/home/huawei/pelican-blueidea"
 
+PLUGINS = ["render_math"]
+
+PATH = 'content'
+STATIC_PATHS = ['images', 'pdfs']
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None

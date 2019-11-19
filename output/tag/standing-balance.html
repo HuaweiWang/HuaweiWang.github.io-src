@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Huawei Wang - standing-balance</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Huawei Wang </a></h1>
+                <nav><ul>
+                    <li><a href="/category/about.html">About</a></li>
+                    <li><a href="/category/current-projects.html">Current Projects</a></li>
+                    <li><a href="/category/cv.html">CV</a></li>
+                    <li><a href="/category/past-projects.html">Past Projects</a></li>
+                    <li><a href="/category/publications.html">Publications</a></li>
+                </ul>
+                </nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/standing-balance.html">Controller identification in human standing balacne task</a></h1>
+<footer class="post-info">
+        <span>Tue 19 November 2019</span>
+<span>| tags: <a href="/tag/standing-balance.html">standing-balance</a></span>
+</footer><!-- /.post-info --><div class="section" id="introduction">
+<h2>Introduction</h2>
+<p>Feedback control, instead of preprogramed posture strategies, has been accepted to control posture in human standing balance task. Studies have been done trying to understand the feedback control system and controllers have been got from the standing balance experimental data. However, most of them could not be applied on engineering devices, for instance, humanoid robots and P/O devices, due to the nonparameteric control sturtures and perturbation amplitude related control gains.</p>
+<p>In this study, we proposed that there exists general feedback controllers among healthy human to keep standing balance. Here, general means controller parameters do not change according to perturbation characters. We conducted standing balance experiment under the random distance perturbation of the standing platform. Then we identify parameteric state feedabck controllers (not perturbation amplitude related) in the time domain. The identified controllers have the potential to be used in humanoid robots and P/O devices.</p>
+</div>
+<div class="section" id="method">
+<h2>Method</h2>
+<p>In this project, we first did human standing balance experiment to collect data. Then we developed a stochastic identificaiton method to gurantee that the identified state feedback controllers are stable. Finally, we identified both linear and nonlinear feedback controllers from the collected experimental data.</p>
+<div class="section" id="human-standing-balance-experiment">
+<h3>Human Standing Balance Experiment</h3>
+<p>Eight able bodied subjects including one female and seven males with an average age of <span class="math">\(27 \pm 5.3\)</span> years, height of <span class="math">\(1.71\pm0.08\)</span> m, mass of <span class="math">\(65.3\pm9.2\)</span> kg participated in the study. This study was approved by the Institutional Review Board of Cleveland State University(# IRB-FY2018-40).</p>
+<p>In the experiment, twenty-seven markers were used to track the participants' movements. Five extra markers were placed on the standing platform to record its movement during experiment. Nine Electromyography (EMG) sensors were used in the experiment to record nine muscle activations in the right leg. A four degree of freedom (DOF) V-Gait (Motek Medical) was used as standing plate and to apply perturbation. Six DOF force sensors were built in the V-Gait and used to detect ground reaction forces during experiment.  Experiment setting is shown here.</p>
+<blockquote>
+<div class="align-center figure">
+<img alt="alternate text" src="/images/StandingBalance/ExperimentSetting.png" style="width: 500px;" />
+</div>
+</blockquote>
+<p>In the experiment, perturbation was designed as random square wave signal. Parameters that determined random square wave signal are amplitudes and stage duration. Participants were instructed to keep their vision on the horizontal target, having the feet width similar to the width of shoulder, and feel free to bend the trunk to keep balance.</p>
+<p>More detail of the experiment and results can be found in the <a class="reference external" href="/pdfs/Dissertation_Chapters.pdf">chapter III</a> of my dessertation.</p>
+</div>
+<div class="section" id="stochastic-optimization">
+<h3>Stochastic Optimization</h3>
+<p><strong>Background:</strong> System identification can be used to obtain a model of the human postural control system from experimental data in which subjects are mechanically perturbed while standing. However, unstable controllers were sometimes found, which obviously do not explain human balance and cannot be applied in control of humanoid robots. Eigenvalue constraints can be used to avoid unstable controllers. However, this method is hard to apply to highly nonlinear systems and large identification datasets.</p>
+<p><strong>New method:</strong> To address these issues, we perform the system identification with a stochastic system model where process noise is modeled. The parameter identification is performed by simultaneous trajectory optimizations on multiple episodes that have different instances of the process noise.</p>
+<p><strong>Results:</strong> The stochastic and deterministic identification methods were tested on three types of controllers, including both linear and nonlinear controller architectures. Stochastic identification tracked the experimental data nearly as well as the deterministic identification, while avoiding the unstable controllers that were found with a deterministic system model.</p>
+<p><strong>Comparison with Existing Method:</strong> Comparing to eigenvalue constraints, stochastic identification has wider application potentials. Since linearization is not needed in the stochastic identification, it is applicable to highly nonlinear systems, and it can be applied on large data-sets.</p>
+<p><strong>Conclusions:</strong> Stochastic identification can be used to avoid unstable controllers in human postural control identification.</p>
+<p>For more detail, please check my <a class="reference external" href="/pdfs/Stochastic_Paper.pdf">peer-reviewed paper</a> .</p>
+</div>
+<div class="section" id="standing-balance-controller-identification">
+<h3>Standing Balance Controller Identification</h3>
+<p>An indirect identification approach was used in this study to avoid the bias of direct identification. In the indirect approach, a closed-loop system including human body dynamics,  feedback controller were built to represent the human standing balance system.</p>
+<blockquote>
+<div class="align-center figure">
+<img alt="alternate text" src="/images/StandingBalance/Identification_Structure.png" style="width: 500px;" />
+</div>
+</blockquote>
+<p>Five types of feedback controllers were used in this paper to identify control parameters on the collected experimental data. Two of them are linear: proportional-derivative (PD) controller and full-states proportional-derivative (FPD) controller. The other three are nonlinear: linear states combination with time delay (LSCTD) controller, neural network (NN) controller, and neural network with time delay (NNTD) controller. The formulas of these five controllers are shown below.</p>
+<p>Proportional-Derivative (PD) Controller:</p>
+<blockquote>
+$$
+begin{bmatrix}
+T_a(t)\
+T_h(t)
+end{bmatrix} =
+begin{bmatrix}
+K_{p_a} &amp; 0 &amp; K_{d_a} &amp; 0\
+0 &amp; K_{p_h} &amp; 0 &amp; K_{d_h}\
+end{bmatrix}
+begin{bmatrix}
+theta_a(t) - theta_a^{ref} \ theta_h(t) - theta_h^{ref} \ dot{theta}_a(t) \ dot{theta}_h(t)
+end{bmatrix}
+$$</blockquote>
+<p>Full-States Proportional-Derivative (FPD) Controller:</p>
+<blockquote>
+<div class="math">
+\begin{equation*}
+\begin{equation}\label{FPD controller type}
+\begin{bmatrix}
+T_a(t)\\
+T_h(t)
+\end{bmatrix} =
+\begin{bmatrix}
+K_{p_{aa}} &amp; K_{p_{ah}} &amp; K_{d_{aa}} &amp; K_{d_{ah}}\\
+K_{p_{ha}} &amp; K_{p_{hh}} &amp; K_{d_{ha}} &amp; K_{d_{hh}}\\
+\end{bmatrix}
+\begin{bmatrix}
+\theta_a(t) - \theta_a^{ref} \\ \theta_h(t) - \theta_h^{ref} \\ \dot{\theta}_a(t) \\ \dot{\theta}_h(t)
+\end{bmatrix}
+\end{equation}
+\end{equation*}
+</div>
+</blockquote>
+<p>Linear States Combination with Time Delay (LSCTD) Controller:</p>
+<blockquote>
+<div class="math">
+\begin{equation*}
+\begin{equation}\label{LSCTD controller type}
+\begin{bmatrix}
+T_a(t)\\
+T_h(t)
+\end{bmatrix} = \sum_{m=0}^{D}
+\left(
+\begin{bmatrix}
+ K_{p_{aa}}^m &amp; K_{p_{ah}}^m &amp; K_{d_{aa}}^m &amp; K_{d_{ah}}^m\\
+K_{p_{ha}}^m &amp; K_{p_{hh}}^m &amp; K_{d_{ha}}^m &amp; K_{d_{hh}}^m\\
+\end{bmatrix}
+\begin{bmatrix}
+\theta_a(t-m*\delta t) - \theta_a^{ref} \\ \theta_h(t-m*\delta t) - \theta_h^{ref} \\ \dot{\theta}_a(t-m*\delta t) \\ \dot{\theta}_h(t-m*\delta t)
+\end{bmatrix}
+\right)
+\end{equation}
+\end{equation*}
+</div>
+</blockquote>
+<p>where  $T_a(t)$ is ankle joint torque at time point $t$ and $T_h(t)$ is hip joint torque at time point $t$; $theta_a(t)$ and $theta_h(t)$ are ankle and hip joint angles at time point $t$; $dot{theta}_a(t)$ and $dot{theta}_h(t)$ are ankle and hip joint angular velocities at time point $t$; $theta_a(t-m*delta t)$ and $theta_h(t-m*delta t)$ are ankle and hip joint angles at $m^{th}$ point prior to the current time point $t$; $dot{theta}_a(t-m*delta t)$ and $dot{theta}_h(t-m*delta t)$ are ankle and hip joints angular velocities at $m^{th}$ point prior to the current time point $t$; $K_p$ and $K_d$ are proportional and derivative gains of feedback controllers multiplied with the state at time point $t$. $K_p^m$ and $K_d^m$ are proportional and derivative gains of feedback controllers multiplied with the state at $m^{th}$ point prior to the current time point $t$.\</p>
+<p>Neural Network (NN) Controller:</p>
+<p>NN controller was defined as standard neural network with one hidden layer and four hidden nodes. It is nonlinear controller, since its activation function is a nonlinear function. The inputs of the NN controller are four states and outputs are two torques. Besides, one constant node (unit input) was added at both input and hidden layer. The activation function used in NN controller is smoothed leaky-ReLU function. The reason of smooth is to make it differentiable at all points. The general structure of neural network is shown here.</p>
+<blockquote>
+<div class="align-center figure">
+<img alt="alternate text" src="/images/StandingBalance/NN_general.png" style="width: 500px;" />
+</div>
+</blockquote>
+<p>The smoothed activation function is:</p>
+<blockquote>
+<div class="math">
+\begin{equation*}
+\begin{equation}\label{Activation Function}
+f(x) =  x + 0.7(\frac{x-\sqrt{x^2+0.0001}}{2})
+\end{equation}
+\end{equation*}
+</div>
+</blockquote>
+<p>Neural Network with Time Delay (NNTD) Controller:</p>
+<p>NNTD controller used the same neural networking settings but with one hidden layer and eight hidden nodes. The difference is that the inputs of the NN controller are four current states and prior states (delay inputs). Outputs of NNTD controller are two torques.</p>
+<p>More details of this work, please check <a class="reference external" href="/pdfs/Dissertation_Chapters.pdf">chapter V</a> of my dessertation.</p>
+</div>
+</div>
+<div class="section" id="result">
+<h2>Result</h2>
+</div>
+<div class="section" id="discussion">
+<h2>Discussion</h2>
+</div>
+<script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>                </article>
+<p class="paginator">
+    Page 1 / 1
+</p>
+            </aside><!-- /#featured -->
+            </ol><!-- /#posts-list -->
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="www.linkedin.com/in/huawei-wang-biomech">Linkedin</a></li>
+                            <li><a href="http://chms.csuohio.edu/">CHMS</a></li>
+                            <li><a href="http://hmc.csuohio.edu/">HMC</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/Peter_W_Wang">Tiwtter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
