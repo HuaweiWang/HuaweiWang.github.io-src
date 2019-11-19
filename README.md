@@ -1,2 +1,2 @@
 # HuaweiWang.github.io-src
-The source code of personal website.
+The source code of personal website at GitHub.
