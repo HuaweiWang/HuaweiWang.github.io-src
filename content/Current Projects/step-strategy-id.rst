@@ -1,7 +1,7 @@
 .. _standing_balance:
 
-Step controller identification in human walking under perturbation
-##################################################################
+Step controller identification in perturbed walking 
+###################################################
 :date: 2019-11-19 22:06
 :modified: 2019-11-19 22:08
 :tags: step-strategy-id
