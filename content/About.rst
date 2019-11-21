@@ -1,5 +1,5 @@
-A PhD Candidate in Bio-Mechanics
-################################
+:math:`4^{th}` Year PhD Candidate in Bio-Mechanics
+##################################################
 
 :date: 2019-11-14 22:06
 :modified: 2019-11-14 22:08
@@ -9,17 +9,17 @@ A PhD Candidate in Bio-Mechanics
 :authors: Huawei Wang
 :summary: Main Page
 
-I am currently pursuring my PhD degree in the direction of BioMechanics at Cleveland State University. I work in the Human Motion & Control Lab, supervisoring by Dr. van den Bogert. 
+I am a :math:`4^{th}` year PhD candidate studying BioMechanics at Cleveland State University. I am working at the `Human Motion & Control Lab <http://hmc.csuohio.edu/>`_ as a research asssistant, supervising by `Dr. van den Bogert <https://scholar.google.com/citations?user=laAB4ckAAAAJ&hl=en>`_.
 
 
     .. figure:: /images/MainPage/Personal_Pic1.png
-	:width: 500px
+	:width: 400px
 	:align: center
 
 
 Current Study Topic:
 """"""""""""""""""""
-Identification of engineering applicable feedabck controllers in human motions (for instance, standing balance; perturbed walking). The identification is done through closed-loop identification, which turns the identification problem into trajecotry optimization problem. See Projects for more information.
+I am trying to understand how human control their motions by identifying controllers from motion data. The identified controllers are in engineering applicable form which can be applied on humanoid robotics and prosthetic/orthotic devices. My work is done through closed-loop identification method, which turns controller identification problems into trajecotry optimization problems. See current/past projects for more information of how I did it.
 
 Research Interests
 """"""""""""""""""
