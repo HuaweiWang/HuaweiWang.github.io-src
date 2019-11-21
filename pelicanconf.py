@@ -12,7 +12,7 @@ TIMEZONE = 'America/Detroit'
 
 DEFAULT_LANG = u'en'
 
-THEME = "/home/huawei/pelican-blueidea"
+THEME = "pelican-blueidea"
 
 PLUGINS = ["render_math"]
 
