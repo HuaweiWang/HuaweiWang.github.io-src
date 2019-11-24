@@ -15,10 +15,12 @@ DEFAULT_LANG = u'en'
 THEME = "pelican-blueidea"
 
 PLUGINS = ["render_math",
-	   'pelican_youtube']
+	   "pdf-img"]
 
 PATH = 'content'
 STATIC_PATHS = ['images', 'pdfs']
+
+#USE_FOLDER_AS_CATEGORY = False
 
 
 # Display pages list on the top menu
@@ -40,7 +42,7 @@ STATIC_PATHS = ['images', 'pdfs']
 DISPLAY_SEARCH_FORM  = True
 
 # Sort pages list by a given attribute
-#PAGES_SORT_ATTRIBUTE (Title)
+PAGES_SORT_ATTRIBUTE = 'tags'
 
 
 # Feed generation is usually not desired when developing

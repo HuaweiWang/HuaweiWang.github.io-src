@@ -1,11 +1,10 @@
-:math:`4^{th}` Year PhD Candidate in Bio-Mechanics
-##################################################
-
+A :math:`4^{th}` Year PhD Candidate in Bio-Mechanics
+####################################################
 :date: 2019-11-14 22:06
 :modified: 2019-11-14 22:08
-:tags: About
-:category: About
-:slug: About
+:tags: about
+:category: about
+:slug: about
 :authors: Huawei Wang
 :summary: Main Page
 
@@ -13,8 +12,7 @@ I am a :math:`4^{th}` year PhD candidate studying BioMechanics at Cleveland Stat
 
 
     .. figure:: /images/MainPage/Personal_Pic1.png
-	:width: 400px
-	:align: center
+       :width: 400px
 
 
 Current Study Topic:

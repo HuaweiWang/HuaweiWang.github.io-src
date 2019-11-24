@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Virtual Cycling Machine using Indego</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Huawei Wang </a></h1>
+                <nav><ul>
+                    <li><a href="/category/about.html">about</a></li>
+                    <li><a href="/category/cv.html">CV</a></li>
+                    <li class="active"><a href="/category/projects.html">projects</a></li>
+                    <li><a href="/category/publications.html">publications</a></li>
+                </ul>
+<form id="search" action"#" onsubmit="javascript:window.open('https://duckduckgo.com/?q='+document.getElementById('keywords').value+'+site:');">
+                        <input id="keywords" type="text" />
+                    </form>
+                </nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/drafts/virtual-cycling-Indego.html" rel="bookmark"
+           title="Permalink to Virtual Cycling Machine using Indego">Virtual Cycling Machine using Indego</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <span>Tue 19 November 2019</span>
+<span>| tags: <a href="/tag/virtual-cycling-indego.html">virtual-cycling-Indego</a></span>
+</footer><!-- /.post-info -->      <div class="section" id="introduction">
+<h2>Introduction</h2>
+<p>Human motion is caused by internal and external forces. Internal forces are the muscle forces generated inside human bodies. External forces are the forces externally applied on human bodies, for instance, ground reaction forces, Gravity, contact forces. Internal forces affect motion through the human muscle-skeleton system. External forces affect motion through skeleton system. In the identification studies, control parameters of different human motions (standing balance and walking) were identified by reproducing the same motion with muscle-skeleton models and external environment (ground).</p>
+<p>However, external forces (torques) can also be applied directly to the human joints, which could have the same affect of external environment. For instance, leg exskeleton can apply appropriate resistance torques at hip and knee joints to generate the similar (same) effect of cycling activity. In this project, the Indego exskeleton is used to applied the required resistance torques. In other words, we are going to trun the Indego into a cycling machine.</p>
+</div>
+<div class="section" id="method">
+<h2>Method</h2>
+<p>First part of this project is simulation work, in which a human body model, exskeleton model, and a cycling dynamic model are created. And their connection is shown in the following figure.</p>
+<blockquote>
+<div class="align-center figure">
+<img alt="alternate text" src="/images/VirtualCycling/Principles.png" style="width: 500px;" />
+</div>
+</blockquote>
+<p>More detail of this part of work can be found in the <a class="reference external" href="https://github.com/HuaweiWang/Virtual-Cycling-Simulator/wiki">Wiki</a> of the Virtual Cycling Simulator GitHub repository.</p>
+<p>The exoskeleton model was built based on the identified model parameters of the Indego. This model was used in the simulation test of the robust impedance controller that applied on Indego hardware. Identified parameters include segment inertia, center of mass and motion frictions. segment weight and length were mannually measured.</p>
+<p>Annimation of the forward simulation of this simulation system is shown below:</p>
+<blockquote>
+<div class="align-center figure">
+<img alt="alternate text" src="/images/VirtualCycling/optimize3_result_annimation.gif" style="width: 500px;" />
+</div>
+</blockquote>
+</div>
+<div class="section" id="result">
+<h2>Result</h2>
+</div>
+<div class="section" id="discussion">
+<h2>Discussion</h2>
+</div>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>related webs</h2>
+                        <ul>
+                            <li><a href="www.linkedin.com/in/huawei-wang-biomech">Linkedin</a></li>
+                            <li><a href="http://chms.csuohio.edu/">CHMS</a></li>
+                            <li><a href="http://hmc.csuohio.edu/">HMC</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/Peter_W_Wang">Tiwtter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

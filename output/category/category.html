@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Huawei Wang - category</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Huawei Wang </a></h1>
+                <nav><ul>
+                    <li><a href="/category/about.html">About</a></li>
+                    <li class="active"><a href="/category/category.html">category</a></li>
+                    <li><a href="/category/current-projects.html">Current Projects</a></li>
+                    <li><a href="/category/cv.html">CV</a></li>
+                    <li><a href="/category/past-projects.html">Past Projects</a></li>
+                    <li><a href="/category/projects.html">Projects</a></li>
+                    <li><a href="/category/publications.html">Publications</a></li>
+                </ul>
+<form id="search" action"#" onsubmit="javascript:window.open('https://duckduckgo.com/?q='+document.getElementById('keywords').value+'+site:');">
+                        <input id="keywords" type="text" />
+                    </form>
+                </nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/step-strategy-id.html">Step controller identification in perturbed walking</a></h1>
+<footer class="post-info">
+        <span>Tue 19 November 2019</span>
+<span>| tags: <a href="/tag/step-strategy-id.html">step-strategy-id</a></span>
+</footer><!-- /.post-info --><div class="section" id="introduction">
+<h2>Introduction</h2>
+<p>Step strategy is essential for both human beings and humanoid robots to keep walking balance. Although many control algorithms has been proposed that can control humanoid robots to achieve stable walking under perturbation, there are limited studies that quantitively studied the control strategy of how humans choose their foot placement under perturbed environment. Identifying the human step controller itself is already an interesting topic. On the other hand, by understanding how humans take their steps, it is also helpful to improve the control of humanoid robotics and prosthetic/orthotic devices.</p>
+<p>Capture theory has been developed more than a decade ago and is a successful step strategy for humanoid robots to keep walking balance. In this project, we are interested in knowing if the control structure of the capture theory can explain how humans choice their foot placement in walking, especially the perturbed walking.</p>
+</div>
+<div class="section" id="method">
+<h2>Method</h2>
+<p>We identified step controllers from randomly perturbed walking data with a nonlinear gait model through the indirect identification approach. The identified step controllers have the same feedback structure as the capture theory, but their feedback gains were identified from perturbed walking data. Perturbed walking data was recorded by previous study, in which perturbation is continuously random belt speed changes. The nonlinear gait model is a two dimensional seven-link dynamic model which has been used in many human walking studies. The indirect identification approach guarantees that the identified step controller is able to drive the nonlinear gait model as a closed-loop system generating the expecting motion. The diagram plot of the indirect identification approach in this paper is shown below. The general idea of it is to optimize the control parameters inside the locomotion controller to minimize the difference between the joint motion of the simulation model and the experimental data.</p>
+<blockquote>
+<div class="align-center figure">
+<img alt="alternate text" src="/images/StepStrategy/IdentificationStructure.png" style="width: 500px;" />
+</div>
+</blockquote>
+</div>
+<div class="section" id="result">
+<h2>Result</h2>
+<p>Identification results show that human beings use relatively close but smaller feedback gains to find the foot placement comparing to the capture theory. Center of mass (CoM) position and velocity are sufficient as feedback signals to have a good foot placement estimation, however, the feedback control is more likely to be a nonlinear function, rather than the linear function suggested by the capture theory.</p>
+<p>Identified CoM postion and velocity gains are shown below. Comparing to the capture theory (grey lines), test participants use relative smaller gains in almost all the three waling speeds.</p>
+<blockquote>
+<div class="align-center figure">
+<img alt="alternate text" src="/images/StepStrategy/Gains.png" style="width: 500px;" />
+</div>
+</blockquote>
+<p>With identified step controllers, the swing leg is controlled to follow the swing path which was generated based on the estimated desire foot location. Since perturbation exists, the desire foot location is not a constant postion at ground, but changing with the CoM states. This plot shows the estimated foot locaiton and swing path changes in one swing period.</p>
+<blockquote>
+<div class="align-center figure">
+<img alt="alternate text" src="/images/StepStrategy/Walking_Motion.png" style="width: 500px;" />
+</div>
+</blockquote>
+</div>
+<div class="section" id="onging-work">
+<h2>Onging Work</h2>
+<p>Next step of this project is to apply the identified (average) step controller on the Indego exoskeleton. The goal is to test whether the identified step controller can help choose good foot placement in perturbed walking.</p>
+<p>Healthy participants will wear the Indego exoskeleton and walking on the treadmill with belt speed perturbation. Legs of the Indego will be controlled by identified step controller during the swing phase. In stance phase, Indego legs will be passive. EMG sensors will be placed on participants to record their muscle activations. Our hypothsis is that participants' leg muscule activiations in swing phase will be smaller than wearing all passive Indego.</p>
+<p>To achieve this goal, we have embeded the ground reaction force (GRF) signal from our instrumented treadmill into Indego control system, which will be used as swing/stance phase detector. Here is a video demo shown that the instrumented treadmill is connected with Indego and can control it's motion.</p>
+</div>
+                </article>
+<p class="paginator">
+    Page 1 / 1
+</p>
+            </aside><!-- /#featured -->
+            </ol><!-- /#posts-list -->
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>related webs</h2>
+                        <ul>
+                            <li><a href="www.linkedin.com/in/huawei-wang-biomech">Linkedin</a></li>
+                            <li><a href="http://chms.csuohio.edu/">CHMS</a></li>
+                            <li><a href="http://hmc.csuohio.edu/">HMC</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/Peter_W_Wang">Tiwtter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

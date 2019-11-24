@@ -14,11 +14,10 @@
         <header id="banner" class="body">
                 <h1><a href="/">Huawei Wang </a></h1>
                 <nav><ul>
-                    <li><a href="/category/about.html">About</a></li>
-                    <li><a href="/category/current-projects.html">Current Projects</a></li>
-                    <li><a href="/category/cv.html">CV</a></li>
-                    <li><a href="/category/past-projects.html">Past Projects</a></li>
-                    <li><a href="/category/publications.html">Publications</a></li>
+                    <li><a href="/category/_cv.html">_CV</a></li>
+                    <li><a href="/category/about.html">about</a></li>
+                    <li><a href="/category/projects.html">projects</a></li>
+                    <li><a href="/category/publications.html">publications</a></li>
                 </ul>
 <form id="search" action"#" onsubmit="javascript:window.open('https://duckduckgo.com/?q='+document.getElementById('keywords').value+'+site:');">
                         <input id="keywords" type="text" />
@@ -34,9 +33,21 @@
 <span>| tags: <a href="/tag/walking-impedance-id.html">walking-impedance-id</a></span>
 </footer><!-- /.post-info --><div class="section" id="introduction">
 <h2>Introduction</h2>
+<p>Impedance control has been used in prosthetic legs and exoskeletons to provide soft interactions between users and these devices. This soft interaction can elimate injury of users and also can prevent damage of hardware. Despite these advantages, implementing the impedance control include mannually tunning process which is time comsuming. One reason is that there is no good reference of how large the impedance parameters should be. Quasi-stiffness is usually used as the starting point, however it does not represent the real-stiffness that exists in joints.</p>
+<blockquote>
+<div class="align-center figure">
+<img alt="alternate text" src="/images/ImpedanceIdentification/ImpedanceExample.png" style="width: 300px;" />
+</div>
+</blockquote>
+<p>In this project, we identify the impedance parameters of human leg joints (hip, knee, and ankle) from perturbed walking data. Similar to the step strategy identification, we turn the identification problems into trajectory optimization problems by using closed-loop identification method.</p>
 </div>
 <div class="section" id="method">
 <h2>Method</h2>
+<blockquote>
+<div class="align-center figure">
+<img alt="alternate text" src="/images/ImpedanceIdentification/Identificaiton_approach.png" style="width: 600px;" />
+</div>
+</blockquote>
 <p>Impedance control is defined in the following equation, which has virtual spring-damper property when reaching the target position.</p>
 <p>begin{center}
 $T = K_p*(theta_{tar} - theta) + K_d*(0 -dot{theta})$
