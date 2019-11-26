@@ -21,7 +21,7 @@ Controller in Human Walking. Journal of Biomechanics. under review
 
 **[3] Huawei Wang**, Antonie van den Borget. Identification of parametric standing
 posture control laws from randomly perturbed experimental data. Journal of
-Biomechanical Engineering. Drafted
+Biomechanical Engineering. Drafting
 
 **[4] Huawei Wang**, Xi Wang, Huating Yao and Bin Wang. Generic Design Methodology
 for Electro-Hydraulic Servo Actuator in Aero-engine Main Fuel Control System,

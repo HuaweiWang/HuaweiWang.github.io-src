@@ -15,7 +15,7 @@ DEFAULT_LANG = u'en'
 THEME = "pelican-blueidea"
 
 PLUGINS = ["render_math",
-	   "pdf-img"]
+	   "pdf_img"]
 
 PATH = 'content'
 STATIC_PATHS = ['images', 'pdfs']
