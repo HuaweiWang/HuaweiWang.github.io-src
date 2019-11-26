@@ -3,7 +3,7 @@ Impedance controller identification in human walking unber perturbation
 :date: 2019-11-19 22:06
 :modified: 2019-11-19 22:08
 :tags: walking-impedance-id
-:category: projects
+:category: All Projects
 :slug: walking-impedance-id
 :authors: Huawei Wang
 :status: draft

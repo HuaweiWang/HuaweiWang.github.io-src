@@ -3,7 +3,7 @@ Controller identification in human standing balacne task
 :date: 2019-11-19 22:06
 :modified: 2019-11-19 22:08
 :tags: standing-balance
-:category: projects
+:category: All Projects
 :slug: standing-balance
 :authors: Huawei Wang
 :status: draft

@@ -1,9 +1,9 @@
-A :math:`4^{th}` Year PhD Candidate in Bio-Mechanics
+PhD Candidate in Bio-Mechanics
 ####################################################
 :date: 2019-11-14 22:06
 :modified: 2019-11-14 22:08
 :tags: about
-:category: about
+:category: About
 :slug: about
 :authors: Huawei Wang
 :summary: Main Page

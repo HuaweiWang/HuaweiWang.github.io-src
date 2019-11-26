@@ -3,7 +3,7 @@ Virtual Cycling Machine using Indego
 :date: 2019-11-19 22:06
 :modified: 2019-11-19 22:08
 :tags: virtual-cycling-Indego
-:category: projects
+:category: All Projects
 :slug: virtual-cycling-Indego
 :authors: Huawei Wang
 :status: draft

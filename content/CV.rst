@@ -9,7 +9,7 @@ CV
 :authors: Huawei Wang
 :summary: Curriculum Vitae
 
-This `cv </pdfs/Huawei_Postdoc_CV.pdf>`_ was updated in 2019-11-24
+This `CV </pdfs/Huawei_Postdoc_CV.pdf>`_ was updated in 2019-11-24
 
 .. figure:: /pdfs/cv-1.png
     :width: 800px
