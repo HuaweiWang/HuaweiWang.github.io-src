@@ -53,8 +53,6 @@ Stochastic Optimization
 
 **Conclusions:** Stochastic identification can be used to avoid unstable controllers in human postural control identification.
 
-For more detail, please check my `peer-reviewed paper <{static}/pdfs/Stochastic_Paper.pdf>`_ .
-
 
 Standing Balance Controller Identification
 ''''''''''''''''''''''''''''''''''''''''''
@@ -145,15 +143,28 @@ Neural Network with Time Delay (NNTD) Controller:
 
 NNTD controller used the same neural networking settings but with one hidden layer and eight hidden nodes. The difference is that the inputs of the NN controller are four current states and prior states (delay inputs). Outputs of NNTD controller are two torques.
 
-More details of this work, please check `chapter V <{static}/pdfs/Dissertation_Chapters.pdf>`_ of my dessertation.
-
 
 Result
 """"""
 
+The results suggested that a generalized time-invariant feedback controller can explain as long as 100 seconds experiment data under random square wave perturbation. In addition, more complex controller type results a higher fit between identified trajectories and experiment data in general. This is reasonable, since complex controller type has more control parameters which is more powerful in explaining the experiment data.
+ 
+The mean R 2 of FPD controller type of all identification problems is around 0.6. This is much lower than the R 2 in Park’s identification paper [7], in which short ramp perturbation was used. They identified FPD controller on 3 seconds experiment data. This suggested that FPD controller type is not complex enough to generalization and explain long duration balance data.
 
+Identified PD controllers have similar control parameters. Proportional gains are larger than derivative gains, which is reasonable for PD controllers used in position control. Proportional gains of ankle are larger than hip, which means the ankle joint is stiffer than hip in standing balance. This results can be explained by the large torques at ankle joint and small motions during standing balance task. However, identified PD controllers have relatively large difference of system eigenvalues among participants.
 
-Discussion
-""""""""""
+Identified FPD controllers have similar control parameters. Proportional gains are larger than derivative gains, which is reasonable for PD controllers used in position control. Proportional gains of ankle are larger than hip, which means the ankle joint is stiffer than hip in standing balance. This results can be explained by the large torques at ankle joint and small motions during standing balance task. Self-state feedback gains are larger than cross-state feedback gains. This means that self-states information are usually used to keep standing balance under perturbation. Identified FPD controllers also have relatively small difference of system eigenvalues among participants.
+
+Related Publications
+""""""""""""""""""""
+
+**[1] Huawei Wang**, Antonie van den Borget. Identification of the Human Postural
+Control System through Stochastic Trajectory Optimization. Journal of Neuroscience
+Method. under review `[revised_manuscript] </pdfs/StochasticPaper_Manuscript.pdf>`_
+
+**[2] Huawei Wang**, Antonie van den Borget. Identification of parametric standing
+posture control laws from randomly perturbed experimental data. Journal of
+Biomechanical Engineering. Drafting `[drafted_manuscript] </pdfs/Chapter4.pdf>`_
+
 
 

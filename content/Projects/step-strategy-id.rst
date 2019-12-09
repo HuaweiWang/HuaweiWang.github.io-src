@@ -13,9 +13,9 @@ Step controller identification in perturbed walking
 Introduction
 """"""""""""
 
-Step strategy is essential for both human beings and humanoid robots to keep walking balance. Although many control algorithms has been proposed that can control humanoid robots to achieve stable walking under perturbation, there are limited studies that quantitively studied the control strategy of how humans choose their foot placement under perturbed environment. Identifying the human step controller itself is already an interesting topic. On the other hand, by understanding how humans take their steps, it is also helpful to improve the control of humanoid robotics and prosthetic/orthotic devices.
+Step strategy is essential for both human beings and humanoid robots to keep walking balance. Although many control algorithms has been proposed that can control humanoid robots to achieve stable walking under perturbation, there are limited studies that diectly studied the control strategy of how humans choose their foot placement from walking data. Study humans' step strategy can not only help us understand humans' feedback control algrithms in walking, but also can help improve the balance ability of humanoid robots and prosthetic/orthotic devices.
 
-Capture theory has been developed more than a decade ago and is a successful step strategy for humanoid robots to keep walking balance. In this project, we are interested in knowing if the control structure of the capture theory can explain how humans choice their foot placement in walking, especially the perturbed walking.
+Capture theory has been developed more than a decade ago and is a successful step strategy for humanoid robots to keep walking balance. In this project, we are interested in knowing if the control structure of the capture theory can explain how humans choice their foot placement in perturbed walking.
 
 Method
 """"""
@@ -60,6 +60,19 @@ Next step of this project is to apply the identified (average) step controller o
 Healthy participants will wear the Indego exoskeleton and walking on the treadmill with belt speed perturbation. Legs of the Indego will be controlled by identified step controller during the swing phase. In stance phase, Indego legs will be passive. EMG sensors will be placed on participants to record their muscle activations. Our hypothsis is that participants' leg muscule activiations in swing phase will be smaller than wearing all passive Indego. 
 
 To achieve this goal, we have embeded the ground reaction force (GRF) signal from our instrumented treadmill into Indego control system, which will be used as swing/stance phase detector. Here is a video demo shown that the instrumented treadmill is connected with Indego and can control it's motion. 
+
+.. youtube:: MKcbGxQCNR8
+    :class: youtube-4x3
+    :allowfullscreen: yes
+    :seamless: no
+
+
+
+Related Publications
+""""""""""""""""""""
+
+**[1] Huawei Wang**, Antonie van den Borget. Identification of A Foot Placement
+Controller in Human Walking. Journal of Biomechanics. under review `[manuscript] </pdfs/WalkingPaper_Manuscript.pdf>`_ 
 
 
 

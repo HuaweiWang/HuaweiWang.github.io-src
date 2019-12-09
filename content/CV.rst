@@ -3,7 +3,7 @@ CV
 
 :date: 2019-11-14 22:06
 :modified: 2019-11-24 22:08
-:tags: img
+:tags: cv
 :category: CV
 :slug: cv
 :authors: Huawei Wang
@@ -11,15 +11,14 @@ CV
 
 This `CV </pdfs/Huawei_Postdoc_CV.pdf>`_ was updated in 2019-11-24
 
-.. figure:: /pdfs/cv-1.png
+.. figure:: /images/CV/cv-1.png
     :width: 800px
-    :align: left
 
-.. figure:: /pdfs/cv-2.png
+.. figure:: /images/CV/cv-2.png
+    :width: 800px
+
+.. figure:: /images/CV/cv-3.png
    :width: 800px
 
-.. figure:: /pdfs/cv-3.png
-   :width: 800px
-
-.. figure:: /pdfs/cv-4.png
+.. figure:: /images/CV/cv-4.png
    :width: 800px

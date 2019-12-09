@@ -1,0 +1,6 @@
+[submodule "HuaweiWang.github.io"]
+	path = HuaweiWang.github.io
+	url = git@github.com:HuaweiWang/HuaweiWang.github.io.git
+[submodule "output/output"]
+	path = output/output
+	url = git@github.com:HuaweiWang/HuaweiWang.github.io.git

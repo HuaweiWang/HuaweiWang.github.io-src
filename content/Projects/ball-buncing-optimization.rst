@@ -78,5 +78,11 @@ Result
 
 Time cost of different solvers in solving different bouncing trajectory length is shown below. Below 100 seconds optimization trajectory, time consuming is gradually increasing in Ipopt linear solver. Above 100 seconds optimization trajectory, time consuming increased rapidly.
 
+    .. figure:: /images/BallBouncing/FinalResults.png
+        :width: 700px
+        :align: center
+        :alt: alternate text
+        :figclass: align-center
+
 
 

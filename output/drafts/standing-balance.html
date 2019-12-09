@@ -63,7 +63,6 @@
 <p><strong>Results:</strong> The stochastic and deterministic identification methods were tested on three types of controllers, including both linear and nonlinear controller architectures. Stochastic identification tracked the experimental data nearly as well as the deterministic identification, while avoiding the unstable controllers that were found with a deterministic system model.</p>
 <p><strong>Comparison with Existing Method:</strong> Comparing to eigenvalue constraints, stochastic identification has wider application potentials. Since linearization is not needed in the stochastic identification, it is applicable to highly nonlinear systems, and it can be applied on large data-sets.</p>
 <p><strong>Conclusions:</strong> Stochastic identification can be used to avoid unstable controllers in human postural control identification.</p>
-<p>For more detail, please check my <a class="reference external" href="/pdfs/Stochastic_Paper.pdf">peer-reviewed paper</a> .</p>
 </div>
 <div class="section" id="standing-balance-controller-identification">
 <h3>Standing Balance Controller Identification</h3>
@@ -151,14 +150,23 @@ f(x) =  x + 0.7(\frac{x-\sqrt{x^2+0.0001}}{2})
 </blockquote>
 <p>Neural Network with Time Delay (NNTD) Controller:</p>
 <p>NNTD controller used the same neural networking settings but with one hidden layer and eight hidden nodes. The difference is that the inputs of the NN controller are four current states and prior states (delay inputs). Outputs of NNTD controller are two torques.</p>
-<p>More details of this work, please check <a class="reference external" href="/pdfs/Dissertation_Chapters.pdf">chapter V</a> of my dessertation.</p>
 </div>
 </div>
 <div class="section" id="result">
 <h2>Result</h2>
+<p>The results suggested that a generalized time-invariant feedback controller can explain as long as 100 seconds experiment data under random square wave perturbation. In addition, more complex controller type results a higher fit between identified trajectories and experiment data in general. This is reasonable, since complex controller type has more control parameters which is more powerful in explaining the experiment data.</p>
+<p>The mean R 2 of FPD controller type of all identification problems is around 0.6. This is much lower than the R 2 in Park’s identification paper [7], in which short ramp perturbation was used. They identified FPD controller on 3 seconds experiment data. This suggested that FPD controller type is not complex enough to generalization and explain long duration balance data.</p>
+<p>Identified PD controllers have similar control parameters. Proportional gains are larger than derivative gains, which is reasonable for PD controllers used in position control. Proportional gains of ankle are larger than hip, which means the ankle joint is stiffer than hip in standing balance. This results can be explained by the large torques at ankle joint and small motions during standing balance task. However, identified PD controllers have relatively large difference of system eigenvalues among participants.</p>
+<p>Identified FPD controllers have similar control parameters. Proportional gains are larger than derivative gains, which is reasonable for PD controllers used in position control. Proportional gains of ankle are larger than hip, which means the ankle joint is stiffer than hip in standing balance. This results can be explained by the large torques at ankle joint and small motions during standing balance task. Self-state feedback gains are larger than cross-state feedback gains. This means that self-states information are usually used to keep standing balance under perturbation. Identified FPD controllers also have relatively small difference of system eigenvalues among participants.</p>
 </div>
-<div class="section" id="discussion">
-<h2>Discussion</h2>
+<div class="section" id="related-publications">
+<h2>Related Publications</h2>
+<p><strong>[1] Huawei Wang</strong>, Antonie van den Borget. Identification of the Human Postural
+Control System through Stochastic Trajectory Optimization. Journal of Neuroscience
+Method. under review <a class="reference external" href="/pdfs/StochasticPaper_Manuscript.pdf">[revised_manuscript]</a></p>
+<p><strong>[2] Huawei Wang</strong>, Antonie van den Borget. Identification of parametric standing
+posture control laws from randomly perturbed experimental data. Journal of
+Biomechanical Engineering. Drafting <a class="reference external" href="/pdfs/Chapter4.pdf">[drafted_manuscript]</a></p>
 </div>
 <script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
