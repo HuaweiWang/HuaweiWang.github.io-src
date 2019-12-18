@@ -19,10 +19,6 @@ Controller in Human Walking. Journal of Biomechanics. under review `[manuscript]
 Control System through Stochastic Trajectory Optimization. Journal of Neuroscience
 Method. under review `[revised_manuscript] </pdfs/StochasticPaper_Manuscript.pdf>`_
 
-**[3] Huawei Wang**, Antonie van den Borget. Identification of parametric standing
-posture control laws from randomly perturbed experimental data. Journal of
-Biomechanical Engineering. Drafting `[drafted_manuscript] </pdfs/Chapter4.pdf>`_
-
 **[4] Huawei Wang**, Xi Wang, Huating Yao and Bin Wang. Generic Design Methodology
 for Electro-Hydraulic Servo Actuator in Aero-engine Main Fuel Control System,
 In: Proceedings of ASME Turbo Expo 2014, June 16–20, Dsseldorf, Germany,

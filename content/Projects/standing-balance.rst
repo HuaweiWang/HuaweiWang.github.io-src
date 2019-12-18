@@ -161,10 +161,3 @@ Related Publications
 **[1] Huawei Wang**, Antonie van den Borget. Identification of the Human Postural
 Control System through Stochastic Trajectory Optimization. Journal of Neuroscience
 Method. under review `[revised_manuscript] </pdfs/StochasticPaper_Manuscript.pdf>`_
-
-**[2] Huawei Wang**, Antonie van den Borget. Identification of parametric standing
-posture control laws from randomly perturbed experimental data. Journal of
-Biomechanical Engineering. Drafting `[drafted_manuscript] </pdfs/Chapter4.pdf>`_
-
-
-
